@@ -82,7 +82,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
 }
 .book-card {
@@ -111,10 +111,10 @@ h1, h2, h3, h4, h5, h6 {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.book-card:hover {
+/* .book-card:hover {
     transform: translateY(-5px);
     /* background-color: #38b6ff; */
-}
+/* } */ 
 .book-card:hover .titleHolder {
     background-color: #38b6ff;
     color: white;
@@ -172,10 +172,13 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: left;
     border: black solid 1px;
     flex-wrap: wrap;
-
+    overflow-y: scroll;
+}
+.book-card .credentialHolder::-webkit-scrollbar {
+    width: 2px;
 }
 .book-card .credentialHolder p{
     margin-right:50px;
     font-family: OutfitBold;
-
+    
 }

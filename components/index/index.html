@@ -4,21 +4,22 @@
  <meta charset="UTF-8" />
  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <title>Title</title>
+ <title>Book Notes+</title>
  <link rel="stylesheet" href="../../css/index.css">
  </head>
  <body>
 
     <div class="wrapper">
         <div class="header">
-            <h1>Book Reviewer+</h1>
+            <h1>Manga Notes+</h1>
         </div>
         <div class="search-section">
-            <input type="text" placeholder="Search..."> 
-            <button><img src="https://static.thenounproject.com/png/123844-200.png" alt="search_icon"></button>
+            <input id="searchInput" type="text" placeholder="Search..."> 
+            <button id= "searchBtn"><img src="https://static.thenounproject.com/png/123844-200.png" alt="search_icon"></button>
         </div>
 
         <div id= 'bookShelf' class="book-shelf">
+            <!-- Card format hardcoded -->
             <!-- <div class="book-card">
                 <div class="titleHolder"><h1>Title</h1></div>
                 <div class="bookContent">
@@ -43,6 +44,7 @@
         </div>
     </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script type="module" src="index.js"></script>
 </body>
 </html>
