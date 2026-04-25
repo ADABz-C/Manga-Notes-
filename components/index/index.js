@@ -109,6 +109,14 @@ function displayBooks(bookCards){
                     duration: 0.1
                 });
             });
+
+            card.addEventListener('click', ()=> {
+                //save book selected
+                localStorage.setItem("selectedBook", JSON.stringify(bookObj));
+
+                // redirect to reviewPage
+                window.location.href = "reviewPage.html";
+            })
         });
 
     });
