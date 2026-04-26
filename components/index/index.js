@@ -52,18 +52,21 @@ let allbooks = [];
 
 function displayBooks(bookCards){
 
-    const bookObj = new Book(
-        book.title,
-        book.author,
-        book.description,
-        book.image,
-        book.rank
-    )
+
 
     const bookShelf = document.getElementById('bookShelf');
     bookShelf.innerHTML = "";
 
     bookCards.forEach(book => {
+        
+        const bookObj = new Book(
+            book.title,
+            book.author,
+            book.description,
+            book.book_image,
+            book.rank
+        );
+
         const card = document.createElement('div');
         card.classList.add('book-card');
         card.innerHTML = 
@@ -84,13 +87,11 @@ function displayBooks(bookCards){
                 </div>
         `;
         
-        bookShelf.appendChild(card);
+        
 
         // Card animation
 
-        const cards = document.querySelectorAll('.book-card');
-
-        cards.forEach(card => {
+        // const cards = document.querySelectorAll('.book-card');
 
             //mouse enters
             card.addEventListener('mouseenter', () => {
@@ -112,12 +113,15 @@ function displayBooks(bookCards){
 
             card.addEventListener('click', ()=> {
                 //save book selected
+                console.log("Saving book", bookObj)
                 localStorage.setItem("selectedBook", JSON.stringify(bookObj));
-
+                
+    
                 // redirect to reviewPage
-                window.location.href = "reviewPage.html";
+                window.location.href = "../reviewPage/reviewPage.html";
             })
-        });
+
+        bookShelf.appendChild(card);
 
     });
 
