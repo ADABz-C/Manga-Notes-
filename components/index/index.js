@@ -1,10 +1,11 @@
 class Book {
-    constructor(title, author, description, image, rank){
+    constructor(title, author, description, image, rank, url){
         this.title = title;
         this.author = author;
         this.description = description;
         this.image = image;
         this.rank = rank;
+        this.amazon_product_url = url;
     }
 }
 
@@ -52,8 +53,6 @@ let allbooks = [];
 
 function displayBooks(bookCards){
 
-
-
     const bookShelf = document.getElementById('bookShelf');
     bookShelf.innerHTML = "";
 
@@ -64,7 +63,8 @@ function displayBooks(bookCards){
             book.author,
             book.description,
             book.book_image,
-            book.rank
+            book.rank,
+            book.amazon_product_url
         );
 
         const card = document.createElement('div');
